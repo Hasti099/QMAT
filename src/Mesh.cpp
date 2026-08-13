@@ -3,7 +3,11 @@
 #include <CGAL/centroid.h>
 
 #include <Eigen/Dense>
+#ifdef _WIN32
 #include <corecrt_math_defines.h>
+#else
+#include <cmath>
+#endif
 
 double Triangulation::TetCircumRadius(const Tetrahedron & tet)
 {
